@@ -1,8 +1,14 @@
 # NATOPhone
 
-TODO: Write a gem description
+Simple tool to encode/decode [NATO alphabet](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet).
 
 ## Installation
+
+### CLI
+
+    $ gem install NATOPhone
+
+### Library
 
 Add this line to your application's Gemfile:
 
@@ -14,18 +20,30 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install NATOPhone
-
 ## Usage
 
-TODO: Write usage instructions here
+### CLI
 
-## Contributing
+    $ natophone encode Hello world.
 
-1. Fork it ( https://github.com/[my-github-username]/NATOPhone/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+    $ natophone encode --yell Hello world.
+
+    $ natophone encode --json Hello world.
+
+    $ natophone decode hotel echo lima lima oscar - whiskey oscar romeo lima delta stop
+
+    $ natophone decode --yell hotel echo lima lima oscar - whiskey oscar romeo lima delta stop
+
+    $ natophone decode --json hotel echo lima lima oscar - whiskey oscar romeo lima delta stop
+
+### Library
+
+```ruby
+enc = NATOPhone::Encoder.new(args)
+puts enc.inspect
+```  
+
+```ruby
+dec = NATOPhone::Decoder.new(args)
+puts dec.inspect
+```  
