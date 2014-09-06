@@ -3,6 +3,8 @@
 
 module NATOPhone
 
+  require 'json'
+
   class Base
 
     attr_accessor :args, :translate, :yell
@@ -39,6 +41,15 @@ module NATOPhone
       @yell = @translate.upcase
     end
 
+    def to_json
+      {
+        'args' => args,
+        'encode' => @encode,
+        'translate' => @translate,
+        'yell' => @yell
+      }.to_json
+    end
+
     private
 
     def convert(input)
@@ -58,6 +69,39 @@ module NATOPhone
 
   end # End of class Encoder
 
+  class Decoder < Base
 
+    attr_accessor :decode
+
+    def initialize(args)
+      super(args)
+      @dic = otan_alphabet_decode()
+      @decode = convert(args)
+      @translate = @decode.join()
+      @yell = @translate.upcase
+    end
+
+    def to_json
+      {
+        'args' => args,
+        'decode' => @decode,
+        'translate' => @translate,
+        'yell' => @yell
+      }.to_json
+    end
+
+    private
+
+    def convert(args)
+      words = []
+      args = [args] if args.is_a?(String)
+      args.each do |el|
+        word = el.split(' ')
+        word.each {|ok| words << ok}
+      end
+      words.map {|word| @dic[word]}
+    end
+
+  end # End of class Decoder
 
 end # End of module NATOPhone
