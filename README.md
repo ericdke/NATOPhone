@@ -1,3 +1,7 @@
+![travis](https://travis-ci.org/ericdke/NATOPhone.svg?branch=master)
+
+[![Coverage Status](https://img.shields.io/coveralls/ericdke/NATOPhone.svg)](https://coveralls.io/r/ericdke/NATOPhone?branch=master)
+
 # NATOPhone
 
 Simple tool to encode/decode [NATO alphabet](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet).
