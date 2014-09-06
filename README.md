@@ -43,11 +43,11 @@ require 'natophone'
 ```  
 
 ```ruby
-enc = NATOPhone::Encoder.new(args)
-puts enc.inspect
+enc_by_string = NATOPhone::Encoder.new('hello world')
+enc_by_array = NATOPhone::Encoder.new(['hello', 'world'])
 ```  
 
 ```ruby
-dec = NATOPhone::Decoder.new(args)
-puts dec.inspect
+dec_by_string = NATOPhone::Decoder.new('hotel echo lima lima oscar - whiskey oscar romeo lima delta')
+dec_by_array = NATOPhone::Decoder.new(%w{hotel echo lima lima oscar - whiskey oscar romeo lima delta})
 ```  
