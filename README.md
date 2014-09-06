@@ -39,6 +39,10 @@ And then execute:
 ### Library
 
 ```ruby
+require 'natophone'
+```  
+
+```ruby
 enc = NATOPhone::Encoder.new(args)
 puts enc.inspect
 ```  

@@ -20,7 +20,10 @@ module NATOPhone
     end
 
     def otan_alphabet_decode
-      otan_alphabet_encode.invert
+      otan = otan_alphabet_encode.invert
+      otan.merge!({
+          "point" => "."
+        })
     end
 
     def sanitize(string)
