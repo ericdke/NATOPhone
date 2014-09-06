@@ -7,7 +7,7 @@ rvm:
   - "2.1.0"
   - "2.0.0"
 
-script: 'rspec spec/spec_natophone.rb'
+script: 'bundle exec rake spec'
 
 branches:
   only:
