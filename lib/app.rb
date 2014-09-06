@@ -97,10 +97,16 @@ module NATOPhone
 
     def convert(args)
       words = []
-      args = [args] if args.is_a?(String)
-      args.each do |el|
-        word = el.split(' ')
-        word.each {|ok| words << ok}
+      if args.is_a?(String)
+        args.split(' ').each do |word|
+          words << word
+        end
+      else
+        args.each do |string|
+          string.split(' ').each do |word|
+            words << word
+          end
+        end
       end
       words.map {|word| @dic[word]}
     end
