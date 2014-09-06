@@ -5,12 +5,12 @@ require_relative 'lib/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "natophone"
-  spec.version       = NatoPhone::VERSION
+  spec.version       = NATOPhone::VERSION
   spec.authors       = ["Eric Dejonckheere"]
   spec.email         = ["eric@aya.io"]
   spec.summary       = %q{Simple tool to encode/decode NATO alphabet.}
-  spec.description   = %q{Simple tool to encode/decode NATO alphabet.}
-  spec.homepage      = ""
+  spec.description   = %q{Simple tool to encode/decode NATO alphabet. Use as a CLI, or as a library for your apps.}
+  spec.homepage      = "https://github.com/ericdke/NATOPhone"
   spec.license       = "MIT"
 
   spec.bindir        = 'bin'

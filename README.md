@@ -1,4 +1,4 @@
-# NatoPhone
+# NATOPhone
 
 Simple tool to encode/decode [NATO alphabet](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet).
 
@@ -39,11 +39,11 @@ And then execute:
 ### Library
 
 ```ruby
-enc = NatoPhone::Encoder.new(args)
+enc = NATOPhone::Encoder.new(args)
 puts enc.inspect
 ```  
 
 ```ruby
-dec = NatoPhone::Decoder.new(args)
+dec = NATOPhone::Decoder.new(args)
 puts dec.inspect
 ```  

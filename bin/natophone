@@ -6,13 +6,13 @@ require_relative '../lib/app'
 
 require "thor"
 
-class NatoPhoneCLI < Thor
+class NATOPhoneCLI < Thor
 
   desc "encode WORD(S)", "Encode to NATO alphabet"
   option :yell, aliases: '-Y', type: :boolean, desc: "Option to YELL the translation"
   option :json, aliases: '-J', type: :boolean, desc: "Option to export the translation in JSON"
   def encode(*args)
-    enc = NatoPhone::Encoder.new(args)
+    enc = NATOPhone::Encoder.new(args)
     if options[:yell]
       puts "\n#{enc.yell}\n\n"
     elsif options[:json]
@@ -26,7 +26,7 @@ class NatoPhoneCLI < Thor
   option :yell, aliases: '-Y', type: :boolean, desc: "Option to YELL the translation"
   option :json, aliases: '-J', type: :boolean, desc: "Option to export the translation in JSON"
   def decode(*args)
-    dec = NatoPhone::Decoder.new(args)
+    dec = NATOPhone::Decoder.new(args)
     if options[:yell]
       puts "\n#{dec.yell}\n\n"
     elsif options[:json]
@@ -38,4 +38,4 @@ class NatoPhoneCLI < Thor
 
 end
 
-NatoPhoneCLI.start(ARGV)
+NATOPhoneCLI.start(ARGV)

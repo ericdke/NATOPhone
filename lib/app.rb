@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-module NatoPhone
+module NATOPhone
 
   require 'json'
 
@@ -104,4 +104,4 @@ module NatoPhone
 
   end # End of class Decoder
 
-end # End of module NatoPhone
+end # End of module NATOPhone
