@@ -5,7 +5,7 @@ require 'lib/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "natophone"
-  spec.version       = NATOPhone::VERSION
+  spec.version       = NatoPhone::VERSION
   spec.authors       = ["Eric Dejonckheere"]
   spec.email         = ["eric@aya.io"]
   spec.summary       = %q{TODO: Write a short summary. Required.}

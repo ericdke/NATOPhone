@@ -1,4 +1,4 @@
-# NATOPhone
+# NatoPhone
 
 Simple tool to encode/decode [NATO alphabet](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet).
 
@@ -6,14 +6,14 @@ Simple tool to encode/decode [NATO alphabet](https://en.wikipedia.org/wiki/NATO_
 
 ### CLI
 
-    $ gem install NATOPhone
+    $ gem install natophone
 
 ### Library
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'NATOPhone'
+gem 'natophone'
 ```
 
 And then execute:
@@ -39,11 +39,11 @@ And then execute:
 ### Library
 
 ```ruby
-enc = NATOPhone::Encoder.new(args)
+enc = NatoPhone::Encoder.new(args)
 puts enc.inspect
 ```  
 
 ```ruby
-dec = NATOPhone::Decoder.new(args)
+dec = NatoPhone::Decoder.new(args)
 puts dec.inspect
 ```  
