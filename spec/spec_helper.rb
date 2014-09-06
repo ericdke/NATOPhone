@@ -3,6 +3,7 @@ Coveralls.wear!
 
 require_relative '../lib/version'
 require_relative '../lib/app'
+require_relative '../lib/cli'
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
