@@ -46,7 +46,7 @@ module NATOPhone
 
     def to_json
       {
-        'args' => args,
+        'args' => @args,
         'encode' => @encode,
         'translate' => @translate,
         'yell' => @yell
@@ -86,7 +86,7 @@ module NATOPhone
 
     def to_json
       {
-        'args' => args,
+        'args' => @args,
         'decode' => @decode,
         'translate' => @translate,
         'yell' => @yell
