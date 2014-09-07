@@ -23,6 +23,9 @@ describe NATOPhone::Encoder do
     it "shows translation" do
       expect(enc2.translate).to eq str
     end
+    it "shows translation" do
+      expect(NATOPhone::Encoder.new(['uniq   spaces']).translate).to eq 'uniform november india quebec - sierra papa alpha charlie echo sierra'
+    end
   end
 
   describe "#encode" do
