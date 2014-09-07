@@ -1,3 +1,6 @@
+# 0.0.3 
+- Map commands to shortcuts
+
 # 0.0.2 2014-09-07
 - Fixes
 - Tests

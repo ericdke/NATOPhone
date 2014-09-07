@@ -21,9 +21,7 @@ module NATOPhone
 
     def otan_alphabet_decode
       otan = otan_alphabet_encode.invert
-      otan.merge!({
-          "point" => "."
-        })
+      otan.merge!({"point" => "."})
     end
 
     def sanitize(string)
@@ -96,19 +94,28 @@ module NATOPhone
     private
 
     def convert(args)
-      words = []
-      if args.is_a?(String)
-        args.split(' ').each do |word|
-          words << word
-        end
+      words = if args.is_a?(String)
+        convert_string(args)
+      elsif args.is_a?(Array)
+        convert_array(args)
       else
-        args.each do |string|
-          string.split(' ').each do |word|
-            words << word
-          end
-        end
+        raise TypeError, "Error: Decoder accepts only Strings or Arrays."
       end
       words.map {|word| @dic[word]}
+    end
+
+    def convert_string args
+      args.split(' ').map {|word| word}
+    end
+
+    def convert_array args
+      words = []
+      args.map do |string|
+        string.split(' ').each do |word|
+          words << word
+        end
+      end
+      return words
     end
 
   end # End of class Decoder
