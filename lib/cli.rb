@@ -7,6 +7,7 @@ module NATOPhone
   class NATOPhoneCLI < Thor
 
     desc "encode WORD(S)", "Encode to NATO alphabet"
+    map "-E" => "encode"
     option :yell, aliases: '-Y', type: :boolean, desc: "Option to YELL the translation"
     option :json, aliases: '-J', type: :boolean, desc: "Option to export the translation in JSON"
     def encode(*args)
@@ -21,6 +22,7 @@ module NATOPhone
     end
 
     desc "decode NATO", "Decode from NATO alphabet"
+    map "-D" => "decode"
     option :yell, aliases: '-Y', type: :boolean, desc: "Option to YELL the translation"
     option :json, aliases: '-J', type: :boolean, desc: "Option to export the translation in JSON"
     def decode(*args)
