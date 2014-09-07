@@ -120,7 +120,7 @@ module NATOPhone
 
     def convert_array args
       words = []
-      args.map do |string|
+      args.each do |string|
         string.split(' ').each do |word|
           words << word
         end
