@@ -62,6 +62,12 @@ describe NATOPhone::Encoder do
     end
   end
 
+  describe "type error" do
+    it "raises a type error" do
+      expect(lambda {NATOPhone::Encoder.new({'test' => 'Run, you fools!'})}).to raise_error(TypeError)
+    end
+  end
+
 end
 
 describe NATOPhone::Decoder do

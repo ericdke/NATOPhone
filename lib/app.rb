@@ -54,10 +54,20 @@ module NATOPhone
     private
 
     def convert(input)
-      input = input.join(' ') if input.is_a?(Array)
+      input = check_input(input)
       characters = sanitize(input).downcase.chars
       res = characters.map {|char| @dic[char]}.compact
       uniq_separator(res)
+    end
+
+    def check_input(input)
+      if input.is_a?(String)
+        return input
+      elsif input.is_a?(Array)
+        return input.join(' ')
+      else
+        raise TypeError, "Error: Encoder accepts only Strings or Arrays."
+      end
     end
 
     def uniq_separator(input)
