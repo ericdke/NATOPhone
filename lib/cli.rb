@@ -17,7 +17,7 @@ module NATOPhone
       elsif options[:json]
         puts enc.to_json
       else
-        puts "\n#{enc.translate}\n\n"
+        puts "\n#{enc.to_s}\n\n"
       end
     end
 
@@ -32,7 +32,7 @@ module NATOPhone
       elsif options[:json]
         puts dec.to_json
       else
-        puts "\n#{dec.translate}\n\n"
+        puts "\n#{dec.to_s}\n\n"
       end
     end
 

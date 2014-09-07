@@ -51,6 +51,10 @@ module NATOPhone
       }.to_json
     end
 
+    def to_s
+      @translate
+    end
+
     private
 
     def convert(input)
@@ -99,6 +103,10 @@ module NATOPhone
         'translate' => @translate,
         'yell' => @yell
       }.to_json
+    end
+
+    def to_s
+      @translate
     end
 
     private
