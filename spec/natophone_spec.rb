@@ -19,20 +19,20 @@ describe NATOPhone::Encoder do
   describe "#translate" do
     str = 'one stop zero - hotel echo lima lima oscar - whiskey oscar romeo lima delta stop'
     it "shows translation" do
-      expect(enc.to_s).to eq str
+      expect(enc.translate).to eq str
     end
     it "shows translation" do
       expect(enc2.to_s).to eq str
     end
     it "shows translation" do
-      expect(NATOPhone::Encoder.new(['uniq   spaces']).to_s).to eq 'uniform november india quebec - sierra papa alpha charlie echo sierra'
+      expect(NATOPhone::Encoder.new('uniq   spaces').to_s).to eq 'uniform november india quebec - sierra papa alpha charlie echo sierra'
     end
   end
 
   describe "#encode" do
     arr = ["one", "stop", "zero", "-", "hotel", "echo", "lima", "lima", "oscar", "-", "whiskey", "oscar", "romeo", "lima", "delta", "stop"]
     it "shows encoded result" do
-      expect(enc.encode).to eq arr
+      expect(enc.to_a).to eq arr
     end
     it "shows encoded result" do
       expect(enc2.encode).to eq arr

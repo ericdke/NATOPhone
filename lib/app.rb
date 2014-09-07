@@ -55,6 +55,10 @@ module NATOPhone
       @translate
     end
 
+    def to_a
+      @encode
+    end
+
     private
 
     def convert(input)
@@ -107,6 +111,10 @@ module NATOPhone
 
     def to_s
       @translate
+    end
+
+    def to_a
+      @decode
     end
 
     private
