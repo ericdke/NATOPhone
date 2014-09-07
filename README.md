@@ -36,9 +36,9 @@ natophone -E Hello world.
 natophone -E 'Hello world.' 'Goodbye!'
 natophone -E --yell Hello world.
 natophone -E --json Hello world.
-natophone decode hotel echo lima lima oscar - whiskey oscar romeo lima delta op
+natophone decode hotel echo lima lima oscar - whiskey oscar romeo lima delta stop
 natophone -D hotel echo lima lima oscar - whiskey oscar romeo lima delta stop
-natophone -D 'hotel echo lima lima oscar' 'whiskey oscar romeo lima delta op'
+natophone -D 'hotel echo lima lima oscar' 'whiskey oscar romeo lima delta stop'
 natophone -D --yell hotel echo lima lima oscar
 natophone -D --json hotel echo lima lima oscar
 ```  
