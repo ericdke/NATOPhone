@@ -6,6 +6,8 @@
 
 Simple tool to encode/decode [NATO alphabet](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet).
 
+*This was an exercise in making a Ruby CLI app following a set of constraints.*
+
 ## Installation
 
 ### CLI
